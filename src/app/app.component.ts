@@ -1,6 +1,7 @@
 import { Component, ElementRef, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { Tooltip } from 'bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,7 @@ export class AppComponent {
     );
     [...tooltipTriggerList].forEach((el) => {
       console.log(el);
-      //new bootstrap.Tooltip(el);
+      new Tooltip(el);
     });
   }
 }
